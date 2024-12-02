@@ -9,7 +9,7 @@ public class UserRegistration {
         String nameRegex = "^[A-Z][a-z]{2,}$";
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
         String mobileRegex = "^[0-9]{2} [0-9]{10}$";
-        String passwordRegex = ".*[0-9].*";
+        String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+={}|\\\\[\\\\]:;\\\"'<>,.?/~`-]).{8,}$";
 
         System.out.println("Enter the first name : ");
         String firstName = sc.nextLine();
