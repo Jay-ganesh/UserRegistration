@@ -12,13 +12,23 @@ public class UserRegistration {
 
         System.out.println("Enter the first name : ");
         String firstName = sc.nextLine();
-        Matcher matcher = pattern.matcher(firstName);
+        Matcher firstNameMatcher = pattern.matcher(firstName);
 
-        if(matcher.matches()){
+        System.out.println("Enter the last name : ");
+        String lastName = sc.nextLine();
+        Matcher lastNameMatcher = pattern.matcher(lastName);
+
+        if(firstNameMatcher.matches()){
             System.out.println("First Name : "+firstName);
         }
         else {
-            System.out.println("Invalid name..!");
+            System.out.println("Invalid first name..!");
+        }
+        if(lastNameMatcher.matches()){
+            System.out.println("Last Name : "+firstName);
+        }
+        else {
+            System.out.println("Invalid last name..!");
         }
     }
 }
